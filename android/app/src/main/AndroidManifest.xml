@@ -20,6 +20,15 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+<!-- if we want to show the pop up that open with app or the web only then we should be using this otherwise if we want to open the app directly then no need of this -->
+          <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <data
+                  android:host="deeplinkdemotest1.page.link"
+                  android:scheme="https"/>
+          </intent-filter>
       </activity>
     </application>
 </manifest>
